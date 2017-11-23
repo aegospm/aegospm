@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="org.thiagocomputer.diario" version="1.0.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="org.adrianogurgel.hi" version="1.0.0">
 	<name>
 		Crush ;)
 	</name>
@@ -9,4 +9,6 @@
 	<author href="http://adrianogurgel.com.br" email="aegospm@yahoo.com.br ">
 		Adriano Gurgel ;)
 	</author>
+	<icon src="ks.png" />
+	<gap:splash	src="asdf.png" />
 </widget>
