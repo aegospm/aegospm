@@ -1,16 +1,50 @@
 @charset "utf-8";
 /* CSS Document */
-
-#idDiario
+#idNormal
+{
+	margin:30px;
+	font-family: Arial;
+	font-size: 16;
+	width:8em;
+	
+}
+#idOpcao_float_right
+{
+	margin:30px;
+	font-family: Arial;
+	font-size: 16;
+	width:8em;
+	float:right;
+}
+#idOpcao_float_left
+{
+	margin:30px;
+	font-family: Arial;
+	font-size: 16;
+	width:8em;
+	float:left;
+}
+#idOpcao_clear_both
 {
 	font-family: Arial;
 	font-size: 16;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	margin-left: -50px;
-	margin-top: -23px;
+	width:8em;
+	clear:both;
 }
 body{
-	background-color: #00ffff;
+	background-color: #FFFFFF;;
 }	
+
+.borda {
+  padding: 5px;/*distância do conteúdo à borda*/
+  margin-bottom: 20px;/*empurra a margem inferior 20px para baixo*/
+  border-bottom-color:#000000;
+  border: 1px solid thin;
+  border-radius: 4px;/*tonalidade aredondada*/
+}
+.cor_borda{
+	background-color: #FF00FF;
+	border-color: #FF0000;
+	color: #0000FF;
+}
+

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="org.thiagocomputer.diario" version="1.0.0">
 	<name>
-		Diário
+		Crush ;)
 	</name>
 	<description>
-		Meu Diário.
+		Opções cold and hot
 	</description>
-	<author href="http://thiagocomputer.com.br" email="email@email.com ">
-		Thiago Computer
+	<author href="http://adrianogurgel.com.br" email="aegospm@yahoo.com.br ">
+		Adriano Gurgel ;)
 	</author>
 </widget>
