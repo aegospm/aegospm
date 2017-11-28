@@ -47,7 +47,7 @@
         	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
             <div style="background-color:#F4F4F4; width:40%" class="minha_borda1">
-                <form action="index.php" method="post" name="form_login"  onsubmit="return verificar(this)">
+                <form action="opcoes.php" method="post" name="form_login"  onsubmit="return verificar(this)">
                     <table>
                         <tr>
                             <td>
@@ -90,13 +90,7 @@
                    </table> 
                    </form>
              </div>
-           
-            <?php 
-				
-				if(isset($_REQUEST['botao'])){
-					header('location:opcoes.php?msg=1, TRUE');
-				}
-					?>
+   
         </div>
         <div id="Dir">
             <div id="google_translate_element"></div><script type="text/javascript">
