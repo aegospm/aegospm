@@ -1,0 +1,231 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+    margin:0px;/*distância em pixels a partir da coordenada (0, 0)*/
+    padding:0;/*Define o espaço entre a borda do elemento e o seu conteúdo*/
+}
+
+html{
+    height:100%;/*maximizando a altura do html*/
+   
+}
+
+
+body.logo{
+    margin:0;	
+    text-align:center;
+    font:14px Georgia, "Times New Roman", Times, serif;
+    color: #000000;
+    height:100%;/*maximizando a altura do body em relação ao html*/
+	background-image:url("../imagens/minium.png");
+	background-repeat:no-repeat;
+	background-position:center;
+	background-position:top;
+	
+	
+}
+
+.principal{
+    width:100%;
+    text-align:left;
+    margin-left:auto; 	
+    margin-right:auto;
+	/*background-color:#CCFFFF;
+    background-image:url("#");*/
+    min-height:100%;/*maximizando a altura do desta div em relação ao body*/
+    /*height:auto;*/
+}
+
+*html principal{
+    height:100%;
+}
+	@media (min-width: 1024px){/*@media é como se fosse uma condicional, o container só é chamado se o comprimento mínimo for de 1170px*/
+		.principal{
+			max-width: 100%;
+			padding:0;
+		}
+	}
+
+.Topo{
+    width:100%;
+    text-align:left;
+    margin-top:0;
+    margin-left:auto; 	
+    margin-right:auto;
+ /*   margin-left:auto; 
+    margin-right:auto;*/
+    background:#666666;
+ /*	background-image:url("../imagens/sisca.png");
+	background-repeat:no-repeat;
+	background-position:right;;*/
+    min-height:110px;/*maximizando a altura do desta div em relaÃ§Ã£o ao body*/
+    height:auto;
+}
+
+/*vamos trabalhar com um contexto de 1024 para desktop*/
+.logo2{
+	float:left;
+	width:100%;/*tinha 300px e converti para %. Peguei o tamanho que considerei como contexto que foi 1024 e fiz, 300/1024*/
+	max-width:300px;
+	height:80px;
+	font-size:0;
+	/*background-image:url(../imagens/logo3.png);
+	background-repeat:no-repeat;
+	background-position:center;*/
+}
+#Esq{
+/*    border-top: 1px solid #0000FF;
+    border-left: 1px solid #0000FF;*/
+    width:20%;
+/*    text-align:left;
+    margin-left:auto;
+    margin-right:auto;
+    background-image:url("#");*/
+	background-color:#CCCCCC;
+    min-height:800px;/*aqui tem que ser em pixels, senÃ£o nÃ£o aparece*/
+    height:auto;
+    float:left;
+}
+html #Esq{
+    height:100%;
+}
+
+
+#Center{
+
+/*    border-right: 4px solid #0000FF;
+    border-top: 1px solid #0000FF;
+    border-left: 4px solid #0000FF;*/
+
+    width:60%;
+    /*text-align:center;*/
+ background-color:#FFFFFF; /* 
+    background-image:url("#"); 
+ 
+    background-position:center;
+    background-repeat:no-repeat;*/
+    min-height:800px;/**aqui tem que ser em pixels, senÃ£o nÃ£o aparece*/
+    height:auto;
+    float:left;
+    font:"Times New Roman", Times, serif;
+}
+html #Center{
+    height:100%;
+}
+
+#Dir{
+/*    border-right: 10px solid #0033FF;
+    border-top: 1px solid #0000FF;
+    border-left: 1px solid #0000FF;*/
+    width:20%;
+	background-color:#CCCCCC;
+/*    text-align:right;
+    background-image:url("#");*/
+    min-height:800px;/*aqui tem que ser em pixels, senÃ£o nÃ£o aparece*/
+    /*height:auto;*/
+    float:right;
+}
+html #Dir{
+    height:100%;
+}
+
+
+#Rodape{
+    width:100%;
+    text-align:center;
+	background-color:#CCCCCC;
+/*    margin-top:4px;esta margem nÃ£o funciona
+    margin-left:auto;
+    margin-right:auto;
+    background:#000000;*/
+    min-height:10px;/*aqui tem que ser em pixels, senÃ£o nÃ£o aparece*/
+    height:auto;
+	
+    clear:both;/**empurra o que estiver (no caso o rodaÃ©) para baixo*//*Evitar que todos os elementos seguintes do flutuante fiquem ao redor dele.*/
+}
+html #Rodape{
+    height:100%;
+}
+
+
+label{
+	color:#009;
+}
+
+/*alerta próprio. Nõa é do bootstrap*/
+.alerta {
+  padding: 15px;/*distância do conteúdo à borda*/
+  margin-bottom: 20px;/*empurra a margem inferior 20px para baixo*/
+  border: 1px solid transparent;
+  border-radius: 4px;/*tonalidade aredondada*/
+}
+
+/*mensagem com cor  de erro parecida com a do bootstrap*/
+.minha_borda_erro{
+	
+	/*border: 1px solid #999;*/
+	background-color: #f2dede;
+	border-color: #d43f3a;
+	color: #a94442;
+	
+	
+}
+/*mensagem com cor de sucesso parecida com a do bootstrap*/
+.minha_borda_sucesso{
+	
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+
+}
+#migalhas_de_pao{
+	margin:0px;
+	text-align:right; 
+	background-color:#060;
+	width:100%;
+	height:35px;
+	min-height:5px;
+	float:right;
+}
+.negrito{
+	font-weight:bold;
+}
+
+/*efeto de sombra nas notícias*/
+/*pseudo-classes, o browser finge que insere uma classe dinâmica em um elemento para que você customize um determinado estado do elemento. Por exemplo, a pseudo-classe :hover estiliza o estado de quando o mouse é colocado em cima dos elementos.*/
+div.minha-sombra:hover p{
+	
+	border: 0.1em solid white;
+	box-shadow: 1px 1px 4px black;/*cria sombra- ordem: deslocamento horizontal 1px, ...vertical 1px, espalhamento 4px e cor*/
+
+
+}
+
+/*grip para foto*/
+.container-foto{
+	margin:0.2em;
+	width:10em;
+	height:7em;
+	background-color:#FFFFFF;
+	float:left;
+}
+.foto{
+	width:100%;
+	float:left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*	transition: opacity 1s;*/

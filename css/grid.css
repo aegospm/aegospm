@@ -1,0 +1,145 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin:0;
+	padding:0;
+	/*o box-sizing serve para que uma div de 200px por exemplo não aumente seu tamanho pra 220px caso o padding dela serja 10px em cada lado. Permance com os duzendo que definimos. Webkit e moz dão suporte a outros navegadores*/
+	-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+			box-sizing: border-box;
+	
+}
+
+/*container*/
+.container{
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	padding:0 20px;
+
+}
+	@media (min-width: 1170px){/*@media é como se fosse uma condicional, o container só é chamado se o comprimento mínimo for de 1170px*/
+		.container{
+			max-width: 1170px;
+			padding:0;
+		}
+	}
+/*linha*/
+.row{
+/*	margin-left:-5px;
+	margin-right:-5px;
+	*/
+	margin-left:15px;
+	margin-right:15px;
+}
+/*pseudo elementos : este evitam que o conteúde ultrapasse o tamanho do container e que fiquem flutuando tb ao redor*/
+	.row:before, row:after{
+		content:"";/*Os pseudo-elementos :before e :after trabalham em parceria com uma propriedade chamada content. Estou dizendo ao navegador que insira um campo vazio antes e depois de quem chamar o método row*/
+		display: table;/*pode conseguir um verdadeiro alinhamento vertical (exatamenter no meio) para elementos com altura dinâmica.*/
+	}
+	.row:after{
+		clear: both;
+	}
+/*colunas*/
+
+.col{
+		display: inline-block;/*os elementos flutam para a erquerda. O mesmo efeito do float=left pode ser alcançado usando o valor do inline-block da propriedade de display (observe que nenhuma propriedade clear é necessária):*/
+		vertical-align:top;
+		min-height:1px;
+		padding-left:5px;/*largura da coluna*/
+		padding-right:5px;
+		width:100%;
+		margin-right:-4px;
+	
+	
+	*display: inline;/*organizo meus elementos em linha sem haver quebra do fluxo*/
+}
+	@media(min-width: 480px){/*para mim só é interessante que haja duas colunas em resuluções com o mínimo de 480 px*/
+		/*duas colunas*/
+		.col-2{
+			width:50%;
+		}		
+	}
+	/*tres colunas, para tabletes*/
+	@media(min-width: 728px){
+		.col-3{
+			width:33.3333%;
+		}
+	}
+
+
+/*estilo teste. demonstração*/
+
+.teste{
+	background:#000066;
+	padding:5px;
+	text-align:justify;
+	margin:2px 0;
+	color:#FFFFFF;
+}
+.big{
+	height:50px;
+}
+
+.noticia1{
+	background:#333333;
+	color:#000066;
+	
+    border-top-width: medium;
+    border-top-style: solid;
+    border-top-color: #f00;
+	
+	text-align:justify;
+	font-size:16px;
+	
+	padding:5px;
+	margin:2px 0;
+	color:#FFFFFF;
+}
+.noticia2{
+	color:#000000;;
+	background:#333333;
+	
+	
+    border-top-width: medium;
+    border-top-style: solid;
+    border-top-color: #0f0;
+	
+	padding:5px;
+	text-align:center;
+	margin:2px 0;
+	color:#FFFFFF;
+}
+.noticia3{
+	background:#333333;
+	color:#000066;
+	
+    border-top-width: medium;
+    border-top-style: solid;
+    border-top-color: #00f;
+	
+	padding:5px;
+	text-align:center;
+	margin:2px 0;
+	color:#FFFFFF;
+}
+
+/*menu*/
+.meu_menu_desktop {
+    display:none;
+}
+@media (min-width:950px){
+    .meu_menu_desktop {
+        display: block;
+    }
+}
+
+.meu_menu_mobile {
+    display:block;
+}
+@media (min-width:950px){
+    .meu_menu_mobile {
+        display: none;
+    }
+}
