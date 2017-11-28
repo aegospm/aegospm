@@ -15,7 +15,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<meta charset=utf-8" />
+	<meta charset="utf-8" />
 	<title>SisAca</title>
 	<!--chamndo meus css aqui dentro-->
 		 <link href="css/modelo.css" rel="stylesheet" type="text/css"/>
