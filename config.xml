@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="org.adrianogurgel.hi" version="1.0.0">
 	<name>
-		Crush ;)
+		Sisaca
 	</name>
 	<description>
-		Opções cold and hot
+		Sistema Acadêmico
 	</description>
 	<author href="http://adrianogurgel.com.br" email="aegospm@yahoo.com.br ">
-		Adriano Gurgel ;)
+		Students
 	</author>
 	<icon src="ks.png" />
-	<gap:splash	src="asdf.png" />
+	<gap:splash	src="logo3.png"/>
 </widget>
