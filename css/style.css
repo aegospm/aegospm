@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	vertical-align:baseline;
+}
+
+#principal{
+	width:80%;
+	margin:0 auto;
+}
+
+nav{
+	height: 4em;
+	width:100%;
+	background:#999999;
+	border-radius:10px;
+}
+
+header{
+	height: 10em;
+	width:100%;
+	margin:0 auto;
+	margin-top:1em;
+	background:#CCCCCC;
+	border-radius:10px;
+}
+
+header h1{
+	font-size:5em;
+	text-align:center;
+}
+
+section#login{
+	background:#FFFFFF;
+	height:40em;
+	width: 100%;
+	border-radius:10px;
+}
+
+section{
+	background:#FFFFFF;
+	height:40em;
+	width: 100%;
+	border-radius:10px;
+	float:left;
+	
+}
+article#login{
+	width:20em;
+	margin:0 auto;
+}
+aside{
+	background:#FFFFFF;
+	height:40em;
+	width:15%;
+	float:right;
+}
+footer{
+	background:#333333;
+	height:10em;
+	border-radius:10px;
+	clear:both;
+}
+
+.alerta{
+	padding:15px;
+	margin-bottom:20px;
+	border:1px solid transparent;
+	border-radius:4px;
+	text-align:center;
+}
+.error{
+	background-color: #f2dede;
+	border-color: #d43f3a;
+	color: #a94442;
+}
+
+
+/*formatação do menu*/
+.menu{
+list-style:none; 
+border:1px solid #c0c0c0; 
+border-radius:10px;
+float:left; 
+}
+.menu li{
+position:relative; 
+float:left; 
+border-right:1px solid #c0c0c0; 
+}
+.menu li a{color:#333; text-decoration:none; padding:5px 10px; display:block;}
+
+.menu li a:hover{
+background:#333; 
+color:#fff; 
+-moz-box-shadow:0 3px 10px 0 #CCC; 
+-webkit-box-shadow:0 3px 10px 0 #ccc; 
+text-shadow:0px 0px 5px #fff; 
+}
+.menu li  ul{
+position:absolute; 
+top:25px; 
+left:0;
+background-color:#fff; 
+display:none;
+}
+.menu li:hover ul, .menu li.over ul{display:block;}
+.menu li ul li{
+border:1px solid #c0c0c0; 
+display:block; 
+width:150px;
+}
+/*FONTE: https://www.devmedia.com.br/menu-em-css-menu-dropdown-horizontal-com-html5-e-css3/37205*/

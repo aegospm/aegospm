@@ -1,10 +1,14 @@
 @charset "utf-8";
 /* CSS Document */
 
+@charset "utf-8";
+/* CSS Document */
+
 * {
 	margin:0;
 	padding:0;
 	/*o box-sizing serve para que uma div de 200px por exemplo não aumente seu tamanho pra 220px caso o padding dela serja 10px em cada lado. Permance com os duzendo que definimos. Webkit e moz dão suporte a outros navegadores*/
+	/*fonte: http://prefixr.com/what-are-vendor-prefixes.php*/
 	-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 			box-sizing: border-box;
