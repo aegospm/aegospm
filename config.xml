@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="org.adrianogurgel.hi" version="1.0.0">
 	<name>
-		Sisaca
+		Sorveteria
 	</name>
 	<description>
-		Sistema Acadêmico
+		Sorveteria
 	</description>
 	<author href="http://adrianogurgel.com.br" email="aegospm@yahoo.com.br ">
-		Students
+		Boss
 	</author>
-	<icon src="logo3.png" />
-	<gap:splash	src="logo3.png"/>
+	<icon src="logo_tradicao.jpg" />
+	<gap:splash	src="logo_tradicao.jpg" />
 </widget>
