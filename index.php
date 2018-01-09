@@ -56,6 +56,8 @@
         <meta charset="utf-8" />
         <title>Sorveteria</title>
         <link href="css/style.css" rel="stylesheet" >
+        <!--tags gap do phonegap-->
+        <meta name="format-detection" content="telephone=no">
 	<!--respon-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -98,7 +100,7 @@
                         <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" style="width:15em;">
                       </div>
 
-                      <button type="submit" class="btn btn-default" onclick="return verificar()" name="entrar" id="entrar">Entrar</button>
+                      <button type="submit" class="btn btn-default" onClick="return verificar()" name="entrar" id="entrar">Entrar</button>
                     </form>
                     <?php
 						if(isset($flag_existe)){
