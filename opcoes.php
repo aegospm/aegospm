@@ -1,297 +1,74 @@
+<?php
+	@session_start();
+	 if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true)) { 
+				  unset($_SESSION['login']); 
+				  unset($_SESSION['senha']);
+				  header('location:index.php'); 
+	  } 
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-	<meta charset="utf-8" />
-	<title>SisAca</title>
-	<!--chamndo meus css aqui dentro-->
-		 <link href="css/modelo.css" rel="stylesheet" type="text/css"/>
-         
-         <link href="css/grid.css" rel="stylesheet" type="text/css" />
-	<!--fim dos css-->
-    
-    <!--MDL-->
-	<link rel="stylesheet" href="mdl/material.min.css">
-	<script src="mdl/material.min.js"></script>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    
-	<!--respon-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--tags gap do phonegap-->
-        <meta name="format-detection" content="telephone=no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <!--end-->
-    
-    <!-- Boot -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <!-- fim Bootstrap-->
-
-  
-</head>
-
-<body>
-	<div class="principal">
-    	<div class="Topo">
-        	<!--<a href="opcoes.php"><h4 style="float:left; color:#CCC; float:left;">SISTEMA ACADÊMICO</h4></a>-->
-            
-                      <a href="opcoes.php" title="Ir à página inicial" alt="Ir à página inicial"> <img src="imagens/logo3.png"  class="logo2"/></a>
-
-        </div>
-        <div id="migalhas_de_pao">
-        		<table width="100%">
-                	<tr>
-                    	<td width="75%">
-                        </td>                    
-                    	<td width="10%">
-                        	<!--font:http://translate.google.com.br/translate_tools -->
-                            <div id="google_translate_element"></div><script type="text/javascript">
-                            function googleTranslateElementInit() {
-                              new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-                            }
-                            </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-                        </td>
-                    	<td width="10%">
-                <!-- Deletable Contact Chip -->
-                <span class="mdl-chip mdl-chip--contact mdl-chip--deletable">
-					<?php
-					
-					
-						$foto_migalhas_de_pao="";
-                    ?>
-                    <img class="mdl-chip__contact" src="fotos/jm.jpeg"></img>
-                    <span class="mdl-chip__text"> <?php echo $_SESSION['login']; ?> </span>
-                    <a href="#" class="mdl-chip__action"></a>
-                </span>                        
-                        </td>
-                        <td width="5%">
-                        
-                <!-- Number badge on icon -->
-                <?php
-					$cont =  1;
-                ?>
-				<a href="caixa_de_mensagens.php" >
-					<div class="material-icons mdl-badge mdl-badge--overlap" data-badge="<?php if($cont == 0){echo "0";}else{echo $cont;}?>" alt="<?php if($cont == 0){echo "0";}else{echo $cont;}?> mensagens não lidas" title="<?php if($cont == 0){echo "0";}else{echo $cont;}?> mensagens não lidas" style="margin-top:10px;">account_box</div>                        
-                </a>
-                
-                        </td>
-                    </tr>
-                </table>
-
-
-        </div>
-        <div id="Esq">
+    <head>
+        <meta charset="utf-8" />
+        <title>Sorveteria</title>
+        <link href="css/style.css" rel="stylesheet" >
+        <link href="css/grid.css" rel="stylesheet" >
         
-      	 <div class="meu_menu_desktop"><!--div para responsividade-->
-
-
-            <table class="table">
-            	<tr>
-                	<td>
-                    	<div style="width:100%; background-color:#66CC33;">
-
-                        </div>
-                        <div class="btn-group"  style="width:100%;">
-                          <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="width:100%;">
-                            CADASTRAR 
-                            <span class="caret"></span>
-                          </button>
-                          <ul class="dropdown-menu">
-                                <li><a href="cad_aluno_lr.php">ALUNO</a></li>
-                                <li><a href="cad_discip.php">DISCIPLINA</a></li>
-                                <li><a href="cad_prof.php">PROFESSOR</a></li>
-                                <li><a href="cad_turma.php">TURMA</a></li>
-                          </ul>
-                        </div>
-                    </td>
-                </tr>
-            	<tr>
-                	<td>
-
-                        <div class="btn-group"  style="width:100%;">
-                          <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="width:100%;">
-                            PESQUISAR <span class="caret"></span>
-                          </button>
-                          <ul class="dropdown-menu">
-                                <li><a href="pesq_aluno.php">ALUNO</a></li>
-                                <li><a href="#">DISCIPLINA</a></li>
-                                <li><a href="#">PROFESSOR</a></li>
-                                <li><a href="pesq_turma.php">TURMA</a></li>
-                                
-                          </ul>
-                        </div>
-
-                    </td>
-                </tr>
-            	<tr>
-                	<td>
-                        <div class="btn-group"  style="width:100%;">
-                          <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="width:100%;">
-                            CENTRAL DE SERVIÇOS <span class="caret"></span>
-                          </button>
-                          <ul class="dropdown-menu">
-                                <li><a href="#">Perguntas Frequentes</a></li>
-                                <li><a href="#">Abrir Chamado</a></li>
-                                <li><a href="#">Meus Chamados</a></li>
-                          </ul>
-                        </div>
-                    </td>
-                </tr>
-            	<tr>
-                	<td>
-                        <div class="btn-group"  style="width:100%;">
-                          <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="width:100%;">
-                            ADMINISTRAÇÃO <span class="caret"></span>
-                          </button>
-                          <ul class="dropdown-menu">
-                                <li><a href="#">Protocolo</a></li>
-                          </ul>
-                        </div>                    
-					</td>
-                </tr>
-            	<tr>
-                	<td>
-                        <div class="btn-group"  style="width:100%;">
-                          <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="width:100%;">
-                            ATIVIDADES ESTUDANTIS<span class="caret"></span>
-                          </button>
-                          <ul class="dropdown-menu">
-                                <li><a href="#">Serviço Social</a></li>
-                          </ul>
-                        </div>                    
-					</td>
-                </tr>
-            </table>
-
-        	</div><!--div para responsividade-->
-            
-           <div class="meu_menu_mobile"><!--div para responsividade-->
-                    <!-- Left aligned menu below button -->
-                    <button id="demo-menu-lower-left" class="mdl-button mdl-js-button mdl-button--icon">
-                      <i class="material-icons">more_vert</i>
-                    </button>
-                    
-                    <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
-                        for="demo-menu-lower-left">
-                      <li class="mdl-menu__item"> <a href="cad_aluno_lr.php">CADASTRAR ALUNO</a></li>
-                      <li class="mdl-menu__item"> <a href="cad_discip.php">CADASTRAR DISCIPLINA</a></li>
-  					  <li class="mdl-menu__item"> <a href="cad_prof.php">CADASTRAR PROFESSOR</a></li>
-                      <li class="mdl-menu__item"> <a href="cad_turma.php">CADASTRAR TURMA</a></li>
-                      <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"></li>
-                      <li class="mdl-menu__item">PESQUISAR ALUNO</li>
-                      <li class="mdl-menu__item">PESQUISAR DISCIPLINA</li>
-  					  <li class="mdl-menu__item">PESQUISAR PROFESSOR</li>
-                      <li class="mdl-menu__item">PESQUISAR TURMA</li>
-                      <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"></li>
-                    </ul>
-              </div><!--div para responsividade-->
-        </div>
-        <div id="Center" align="center">
-        	
-        	
-               <!-- <h2>Não responsivo (vertical)</h2>
-               <div class="row">
-                     <!--três colunas-->
-                  <!--      <div class="teste">Esta semana será a semana de provas. Assim, caros alunos, fiquem atentos aos horários e estudem. Agrade a direção.</div>
-                        <div class="teste">cewte</div>
-                        <div class="teste">asdfd</div>
-                </div>
+    <!--MDL-->
+	<link rel="stylesheet" href="../mdl/material.min.css">
+	<script src="../mdl/material.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    
+    <body>
+		<div id="principal">
+            <header>
+                <h1>Logo da empresa</h1>
+            </header>
+            <nav class="meu_menu_desktop">
+              <ul class="menu">
+                        <li><a href="#">CADASTRAR</a>
+                            <ul>
+                                  <li><a href="#">Cliente</a></li>
+                                  <li><a href="#">Produto</a></li>          
+                            </ul>
+                        </li>
+                        <li><a href="#">PESQUISAR</a>
+                            <ul>
+                                  <li><a href="#">Cliente</a></li>
+                                  <li><a href="#">Produto</a></li>          
+                            </ul>
+                        </li>                
+            </ul>
+            </nav>
+            <nav class="meu_menu_mobile">
+                <!-- Left aligned menu below button -->
+                <button id="demo-menu-lower-left"
+                        class="mdl-button mdl-js-button mdl-button--icon">
+                  <i class="material-icons">more_vert</i>
+                </button>
                 
-               <h2>Não responsivo (horizontal)</h2>
-                <div class="row">
-                        <div class="teste" >Esta semana </div>
-                        <div class="teste">class col col-3</div>
-                        <div class="teste">class col col-3</div>
-                </div>-->
-            	<!--colocando responsividade aqui-->
-              <!--  <h2>Responsivo</h2>
-               <div class="row">
-                    <div class="col col-3">
-                        <div class="teste">class col col-3</div>
-                    </div>
-                    <div class="col col-3">
-                        <div class="teste">class col col-3</div>
-                    </div>
-                    <div class="col col-3">
-                        <div class="teste">class col col-3</div>
-                    </div>
-                </div>   
-               <h2>Últimas notícias</h2>
-				<div class="row" style="margin-left:1%; margin-right:1%;">
-                    <div class="col col-3">
-                        <div class="noticia1">Esta semana será a semana de provas. Assim, caros alunos, fiquem atentos aos horários e estudem. Agrade a direção.</div>
-                    </div>
-                    <div class="col col-3">
-                        <div class="noticia2">class col col-3</div>
-                    </div>
-                    <div class="col col-3">
-                        <div class="noticia3">class col col-3</div>
-                    </div>
-                </div> -->
-				<!--<div class="row" style="margin-left:1%; margin-right:1%;">
-                    <div class="col col-3">
-                        <div class="noticia3">Esta semana será a semana de provas. Assim, caros alunos, fiquem atentos aos horários e estudem. Agrade a direção.</div>
-                    </div>
-                    <div class="col col-3">
-                        <div class="noticia1">class col col-3</div>
-                    </div>
-                    <div class="col col-3">
-                        <div class="noticia2">class col col-3</div>
-                    </div>
-                </div>-->
-               
-			<h2>Últimas notícias</h2>
-				<div class="row" style="margin-left:5px; margin-right:5px;">
-                    <div class="col col-3 minha-sombra">
-                        <p>
-                        	<div class="noticia1">Esta semana será a semana de provas. Assim, caros alunos, fiquem atentos aos horários e estudem. Agrade a direção.</div>
-                       </p>
-                    </div>
-                    <div class="col col-3 minha-sombra">
-                    	<p>
-	                        <div class="noticia2">class col col-3</div>
-                        </p>
-                    </div>
-                    <div class="col col-3 minha-sombra">
-                    	<p>
-	                        <div class="noticia3">class col col-3</div>
-                        </p>
-                    </div>
-                </div>
-                <!--fim da div de responsividade-->
-                
+                <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+                    for="demo-menu-lower-left">
+                  <li class="mdl-menu__item">Some Action</li>
+                  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Another Action</li>
+                  <li disabled class="mdl-menu__item">Disabled Action</li>
+                  <li class="mdl-menu__item">Yet Another Action</li>
+                </ul>
+                            </nav>
+            <section>
+                seção
+                <article>
+                    seção
+                </article>
+            </section>
+          <!--  <aside>
+                lateral
+            </aside>
+            -->
+            <footer>
+                rodapé
+            </footer>
         </div>
-        <div id="Dir">
-                <!-- Expandable Textfield -->
-                <form action="#">
-                	<label>
-                    	Busque no site:
-                    </label>
-                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-                    <label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
-                      <i class="material-icons">search</i>
-                    </label>
-                    <div class="mdl-textfield__expandable-holder">
-                      <input class="mdl-textfield__input" type="text" id="sample6">
-                      <label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
-                    </div>
-                  </div>
-                </form>
-                <hr width="100%;" />
-        </div>
-        <div id="Rodape" align="left">
-            <address>
-              <strong>UFRN/EAJ/Pronatec/Curso Técnico em Informática</strong><br>
-              1355 Rua XXX XXX, Número yyy<br>
-              São Gonçalo do Amarante, RN 59.290-000<br>
-              <abbr title="Phone">Fixo:</abbr> (84) 3456-7890
-            </address>
-            
-            <address>
-              <strong>ESCOLA ESTADUAL JOSÉ MOACIR</strong><br>
-              <a href="mailto:#">eejm@email.com.br</a>
-            </address>
-        </div>
-    </div>
-</body>
+    </body>
 </html>
