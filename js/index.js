@@ -1,4 +1,3 @@
-// JavaScript Document
 function mensagem(){
-	window.alert("O Aplicativo estÃ¡ em construÃ§Ã£o");
-}
+	alert("aplicação em construção");
+	}

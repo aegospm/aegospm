@@ -1,49 +1,29 @@
+<!--abaixo segue nossa estrutura básisa para funcionar o cordova-->
 <!DOCTYPE html>
-<html lang="pt-br">
-	<head>
-    	<title>
-        	2.5 Criando Tela Principal de um Aplicativo – Diário
-        </title>
-		<meta charset="UTF-8" />
-        <!--tags gap do phonegap-->
-        <meta name="format-detection" content="telephone=no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <!--end-->
-        <link rel="stylesheet" type="text/css" href="index.css">
-        
-		<script type="text/javascript" src="index.js"></script><!--não funcionou esse js-->
-        <script type="text/javascript" language="JavaScript">
-        	function verificar() {
-       //     	window.alert("Preencha todos os campos!");
-            }
+<html>
 
-        </script>
-    </head>
-    <body>	
-    	<h2>Analu, escolha uma das opções abaixo:</h2><br />
-        <div id="idOpcao_float_left" class="borda cor_borda">
-        	<h1 onClick="olhar()">1- Olhar</h1>
-        </div>
-        <div id="idOpcao_float_left" class="borda cor_borda">
-        	<h1 onClick="tocar()">1- Tocar</h1>
-        </div>
-        <div id="idOpcao_float_left" class="borda cor_borda">
-        	<h1 onClick="cheirar()">3- Cheirar</h1>
-        </div>
-        <div id="idOpcao_float_left" class="borda cor_borda">
-        	<h1 onClick="abracar()">4- Abraçar</h1>
-        </div>
-        <div id="idOpcao_float_left" class="borda cor_borda">
-        	<h1 onClick="beijar()">5- Beijar</h1>
-        </div>
-        <div id="idOpcao_float_left" class="borda cor_borda">
-        	<h1 onClick="chupar()">6- Chupar</h1>
-        </div>
-        <div id="idOpcao_float_left" class="borda cor_borda">
-        	<h1 onClick="fuder()">7- Fuder</h1>
-        </div>
-        <div id="idOpcao_float_left" class="borda cor_borda">
-        	<h1 onClick="nda()">8- NDA</h1>
-        </div>        
-    </body>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+   <!-- <meta name="msapplication-tap-highlight" content="no" />-->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+ <!--   <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />-->
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Chamdas</title>
+</head>
+
+<body>
+    <div id="idMensagem">
+        <h1 onClick="mensagem()">Chamadas</h1>
+        
+        <input type="button" onClick="messagem()" value="clique aqui"/>
+    </div>
+    <!--este script cordova é o mais importante; não o tire, pois ela os pluings (configurações básicas) nao serão manipulados direitos -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+      //  app.initialize();
+    </script>
+</body>
+
 </html>

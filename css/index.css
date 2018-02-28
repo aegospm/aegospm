@@ -1,16 +1,7 @@
-@charset "utf-8";
-/* CSS Document */
-
-#idDiario
-{
-	font-family: Arial;
-	font-size: 16;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	margin-left: -50px;
-	margin-top: -23px;
+#idMensagem{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	position:absolute;
+	left:50%;
+	top:50%;
 }
-body{
-	background-color: #00ffff;
-}	
